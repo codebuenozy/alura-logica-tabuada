@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang=pt-br>
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroTabuada = parseInt(prompt("De qual número você quer saber a tabuada?"));
+
+    // Verifica se o valor fornecido é um número
+    while (isNaN(numeroTabuada)) {
+        numeroTabuada = parseInt(prompt("Por favor, informe um número válido para a tabuada:"));
+    }
+
+    var multiplicador = parseInt(prompt(numeroTabuada + " x quanto?"));
+
+    // Verifica se o valor fornecido é um número
+    while (isNaN(multiplicador)) {
+        multiplicador = parseInt(prompt("Por favor, informe um número válido para o multiplicador:"));
+    }
+
+    for (var contador = 1; contador <= multiplicador; contador++) {
+        mostra(numeroTabuada + " x " + contador + " = " + (numeroTabuada * contador));
+    }
+
+    mostra("Para saber outra tabuada recarregue a página ou aperte F5");
+
+</script>
+
+</html>
+
+
+
