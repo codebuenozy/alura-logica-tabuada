@@ -1,52 +1,35 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 
-<html lang=pt-br>
-<meta charset="UTF-8">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabuada</title>
 
-<style>
+	<link rel="stylesheet" href="./assets/style/style.css">
+</head>
 
-html {
-width: 90%;
-margin: 0 auto;
-font-size: 30px;
-text-align: center;
-}
+<body>
 
-</style>
+	<h1>Calculadora de Tabuada</h1>
 
-<script>
-    function pulaLinha() {
-        document.write("<br><br>");
-    }
+	<form>
+		<label for="numero">Digite o número que deseja calcular a tabuada:</label>
+		<input type="number" id="numero" name="numero" placeholder="Ex: 7">
 
-    function mostra(frase) {
-        document.write(frase);
-        pulaLinha();
-    }
+		<label for="multiplicador">Até que número deseja multiplicar?</label>
+		<input type="number" id="multiplicador" name="multiplicador" placeholder="Ex: 10">
 
-    var numeroTabuada = parseInt(prompt("De qual número você quer saber a tabuada?"));
+		<label for="cor">Escolha a cor da linha:</label>
+		<input type="color" id="cor" name="cor" value="#000000">
 
-    // Verifica se o valor fornecido é um número
-    while (isNaN(numeroTabuada)) {
-        numeroTabuada = parseInt(prompt("Por favor, informe um número válido para a tabuada:"));
-    }
+		<button type="button" onclick="calcularTabuada()">Calcular</button>
 
-    var multiplicador = parseInt(prompt(numeroTabuada + " x quanto?"));
+		<div id="resultado"></div>
+	</form>
 
-    // Verifica se o valor fornecido é um número
-    while (isNaN(multiplicador)) {
-        multiplicador = parseInt(prompt("Por favor, informe um número válido para o multiplicador:"));
-    }
+	<script type="text/javascript" src="./assets/script/script.js"></script>
 
-    for (var contador = 1; contador <= multiplicador; contador++) {
-        mostra(numeroTabuada + " x " + contador + " = " + (numeroTabuada * contador));
-    }
-
-    mostra("Para saber outra tabuada recarregue a página ou aperte F5");
-
-</script>
+</body>
 
 </html>
-
-
-
